@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Quick Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
  
 <body class="m-0 p-0 box-border bg-gradient-to-b from-white from-0.5% to-[#E4ECFF] min-h-screen overflow-x-hidden">
@@ -258,5 +261,534 @@ src="./images/icon-middle.svg"
           </div>
         </div>
     </section>
-</body>
+
+    <!-- Section Subscription -->
+        <section class="min-h-screen bg-white flex items-start justify-center px-4 py-12 md:py-20">
+            <div class="w-full max-w-[1220px]">
+    
+                <div class="text-center">
+                    <h1 class="text-[#10184E] font-bold text-[26px] md:text-[48px] leading-[1.35] md:leading-[1.2] tracking-[-0.01em]">
+                        Expand your options with a subscription
+                    </h1>
+    
+                    <p class="mx-auto mt-6 max-w-[900px] text-[#646A85] font-medium text-[16px] md:text-[18px] leading-[1.8] md:leading-[1.65]">
+                        Graphs displaying your performance for metrics like follower evolution, average rate
+                        per post and reach and impressions to give you the insights.
+                    </p>
+    
+                    <!-- Billing Toggle
+                         checked = Bill Annually
+                         unchecked = Bill Monthly -->
+                    <div class="mt-8 md:mt-10 inline-flex items-center gap-4 text-[#676B80] font-semibold text-[14px] md:text-[17px]">
+                        <!-- กดคำนี้แล้วเปลี่ยนเป็นรายเดือน -->
+                        <button id="monthlyBtn" type="button" class="transition-colors duration-300">
+                            Bill Monthly
+                        </button>
+    
+                        <!-- ปุ่มสไลด์ Toggle -->
+                        <label class="relative inline-flex w-[58px] h-[32px] cursor-pointer items-center">
+                            <!-- input checkbox คือ state จริงของ toggle -->
+                            <input
+                                id="billingToggle"
+                                type="checkbox"
+                                class="sr-only peer"
+                                unchecked
+                                aria-label="Billing cycle toggle"
+                            >
+                            <!-- พื้นหลังของ Toggle: ปิด = เทา / เปิด = เขียว -->
+                            <span
+                                class="block w-[58px] h-[32px] rounded-full bg-[#D4DAE8] peer-checked:bg-[#35C78A] transition-colors duration-300"
+                            ></span>
+                            <span
+                                class="absolute left-[3px] top-[3px] w-[26px] h-[26px] rounded-full bg-white shadow-sm transition-transform duration-300 peer-checked:translate-x-[26px]"
+                            ></span>
+                        </label>
+                        <button id="annuallyBtn" type="button" class="transition-colors duration-300">
+                            Bill Annually
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-14 md:mt-20 hidden md:grid grid-cols-3 gap-7">
+    
+                    <!-- Desktop Card: Base -->
+                    <article class="bg-white rounded-[18px] border border-[#E9ECF6] px-8 py-9 md:px-10 md:py-11">
+                        <h2 class="text-[#10184E] font-bold text-[36px]">Base</h2>
+    
+                        <p class="mt-5 text-[#6E738B] font-medium text-[17px] leading-[1.45]">
+                            Free start for your project on
+                            our platform.
+                        </p>
+    
+                        <!-- ราคา Desktop: JS จะเปลี่ยนค่าจาก data-monthly / data-annually -->
+                        <div class="mt-8 flex items-end gap-3">
+                            <span
+                                class="price text-[#11194D] text-[62px] md:text-[56px] font-extrabold leading-none"
+                                data-monthly="0"
+                                data-annually="0"
+                            >$0</span>
+    
+                            <span class="period text-[#69708B] text-[16px] font-semibold mb-2">
+                                Per User / Per Year
+                            </span>
+                        </div>
+    
+                        <!-- รายการ Features -->
+                        <div class="mt-8 border-t border-[#EBEEF7] pt-8 space-y-4">
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to editing all blocks
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Editing blocks together
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to all premium icons
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                A dedicated domain
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Ability to integrate with CMS
+                            </p>
+                        </div>
+    
+                        <!-- ปุ่ม Desktop: กดแล้วเปิดแท็บใหม่ -->
+                        <button
+                            type="button"
+                            data-open-plan="base"
+                            class="relative overflow-visible mt-9 w-full h-[58px] md:h-[52px] rounded-[12px] bg-[#E6F0FF] hover:bg-[#2F43D6] hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-[#2F43D6] active:bg-[#1D2A91]  text-[#293FCC] font-bold text-[20px] md:text-[18px]">
+                            <!-- Animation Ping -->
+                            <span class=" absolute -top-2 -right-1 w-4 h-4 rounded-full bg-blue-600 opacity-75 animate-ping pointer-events-none"></span>
+                            <span class=" absolute -top-2 -right-1 w-4 h-4 rounded-full bg-blue-700 pointer-events-none"></span>
+                            <span class="relative z-10">
+                            Try for Free</span>
+                        </button>
+                    </article>
+    
+                    <!-- Desktop Card: Standard -->
+                    <article class="bg-white rounded-[18px] border border-[#E9ECF6] px-8 py-9 md:px-10 md:py-11">
+                        <h2 class="text-[#10184E] font-bold text-[36px]">Standard</h2>
+    
+                        <p class="mt-5 text-[#6E738B] font-medium text-[17px] leading-[1.45]">
+                            For a small company that
+                            wants to show what it's worth.
+                        </p>
+    
+                        <!-- ราคา Desktop -->
+                        <div class="mt-8 flex items-end gap-3">
+                            <span
+                                class="price text-[#11194D] text-[62px] md:text-[56px] font-extrabold leading-none"
+                                data-monthly="30"
+                                data-annually="300"
+                            >$300</span>
+    
+                            <span class="period text-[#69708B] text-[16px] font-semibold mb-2">
+                                Per User / Per Year
+                            </span>
+                        </div>
+    
+                        <!-- รายการ Features -->
+                        <div class="mt-8 border-t border-[#EBEEF7] pt-8 space-y-4">
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to editing all blocks
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Editing blocks together
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to all premium icons
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                A dedicated domain
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Ability to integrate with CMS
+                            </p>
+                        </div>
+    
+                        <!-- ปุ่ม Desktop: กดแล้วเปิดแท็บใหม่ -->
+                        <button
+                            type="button"
+                            data-open-plan="standard"
+                            class="mt-9 w-full h-[58px] md:h-[52px] rounded-[12px] bg-[#E6F0FF] hover:bg-[#2F43D6] hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-[#2F43D6] active:bg-[#1D2A91] text-[#293FCC] font-bold text-[20px] md:text-[18px]"
+                        >
+                            Start 14 Days Free Trial
+                        </button>
+                    </article>
+    
+                    <!-- Desktop Card: Unlimited -->
+                    <article class="bg-white rounded-[18px] border border-[#E9ECF6] px-8 py-9 md:px-10 md:py-11">
+                        <h2 class="text-[#10184E] font-bold text-[36px]">Unlimited</h2>
+    
+                        <p class="mt-5 text-[#6E738B] font-medium text-[17px] leading-[1.45]">
+                            For a large company that wants
+                            to achieve maximum returns
+                        </p>
+    
+                        <!-- ราคา Desktop -->
+                        <div class="mt-8 flex items-end gap-3">
+                            <span
+                                class="price text-[#11194D] text-[62px] md:text-[56px] font-extrabold leading-none"
+                                data-monthly="60"
+                                data-annually="600"
+                            >$600</span>
+    
+                            <span class="period text-[#69708B] text-[16px] font-semibold mb-2">
+                                Per User / Per Year
+                            </span>
+                        </div>
+    
+                        <!-- รายการ Features -->
+                        <div class="mt-8 border-t border-[#EBEEF7] pt-8 space-y-4">
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to editing all blocks
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Editing blocks together
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to all premium icons
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                A dedicated domain
+                            </p>
+                            <p class="flex items-center gap-3 text-[#606784] text-[16px] md:text-[17px] font-medium">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Ability to integrate with CMS
+                            </p>
+                        </div>
+    
+                        <!-- ปุ่ม Desktop: กดแล้วเปิดแท็บใหม่ -->
+                        <button
+                            type="button"
+                            data-open-plan="unlimited"
+                            class="mt-9 w-full h-[58px] md:h-[52px] rounded-[12px] bg-[#E6F0FF] hover:bg-[#2F43D6] hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-[#2F43D6] active:bg-[#1D2A91]  text-[#293FCC] font-bold text-[20px] md:text-[18px]"
+                        >
+                            Start 14 Days Free Trial
+                        </button>
+                    </article>
+                </div>
+    
+                <!-- ======================================================
+                     Mobile Pricing Card
+                     แสดงเฉพาะจอเล็กกว่า md
+                     Base และ Unlimited จะไม่โชว์เป็นการ์ดแยก
+                     แต่เลือกผ่าน Dropdown ข้างชื่อแพ็กเกจแทน
+                     ====================================================== -->
+                <div class="mt-12 block md:hidden">
+                    <article class="relative overflow-visible bg-white rounded-[14px] border border-[#E9ECF6] px-7 py-9 shadow-[0_18px_50px_rgba(35,50,110,0.08)]">
+    
+                        <!-- ชื่อแพ็กเกจ + Dropdown -->
+                        <div class="relative inline-flex items-center gap-2">
+                            <h2 id="mobilePlanTitle" class="text-[#343767] font-bold text-[24px]">
+                                Standard
+                            </h2>
+    
+                            <!-- ปุ่มลูกศร Dropdown -->
+                            <button
+                                id="mobileDropdownButton"
+                                type="button"
+                                aria-expanded="false"
+                                class="inline-flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#F4F6FB] transition-colors"
+                            >
+                                <svg class="w-4 h-4 text-[#343767]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+    
+                            <!-- กล่อง Dropdown Mobile
+                                 JS จะเติมตัวเลือก เช่น Base / Unlimited ให้เอง -->
+                            <div
+                                id="mobileDropdownMenu"
+                                class="hidden absolute left-0 top-full z-30 mt-2 w-[170px] rounded-[14px] border border-[#E9ECF6] bg-white p-2 shadow-[0_14px_40px_rgba(20,30,80,0.14)]"
+                            ></div>
+                        </div>
+    
+                        <!-- คำอธิบายแพ็กเกจ Mobile -->
+                        <p id="mobileDescription" class="mt-5 text-[#6E738B] font-medium text-[15px] leading-[1.8]">
+                            For a small company that wants to show what it's worth.
+                        </p>
+    
+                        <!-- ราคา Mobile: JS จะเปลี่ยนตามแพ็กเกจและ Billing -->
+                        <div class="mt-7 flex items-end gap-3">
+                            <span id="mobilePrice" class="text-[#343767] text-[38px] font-extrabold leading-none">$300</span>
+                            <span id="mobilePeriod" class="text-[#69708B] text-[13px] font-semibold mb-1">Per User / Per Year</span>
+                        </div>
+    
+                        <!-- รายการ Features Mobile -->
+                        <div class="mt-7 border-t border-[#EBEEF7] pt-7 space-y-4">
+                            <p class="flex items-center gap-4 text-[#7A8098] text-[13px] font-medium">
+                                <span class="inline-flex shrink-0 items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to editing all blocks
+                            </p>
+                            <p class="flex items-center gap-4 text-[#7A8098] text-[13px] font-medium">
+                                <span class="inline-flex shrink-0 items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Editing blocks together
+                            </p>
+                            <p class="flex items-center gap-4 text-[#7A8098] text-[13px] font-medium">
+                                <span class="inline-flex shrink-0 items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Access to all premium icons
+                            </p>
+                            <p class="flex items-center gap-4 text-[#7A8098] text-[13px] font-medium">
+                                <span class="inline-flex shrink-0 items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                A dedicated domain
+                            </p>
+                            <p class="flex items-center gap-4 text-[#7A8098] text-[13px] font-medium">
+                                <span class="inline-flex shrink-0 items-center justify-center w-5 h-5 rounded-full bg-[#EAF3FF] text-[#4D8EF7] text-[12px] font-bold">✓</span>
+                                Ability to integrate with CMS
+                            </p>
+                        </div>
+    
+                        <!-- ปุ่ม Mobile: JS จะเปลี่ยนข้อความ/สีตามแพ็กเกจ และกดเปิดแท็บใหม่ -->
+                        <button
+                            id="mobilePlanButton"
+                            type="button"
+                            class="mt-9 w-full h-[58px] rounded-[12px] bg-[#2F43D6] text-white font-bold text-[17px] "
+                        >
+                            Start 14 Days Free Trial
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            /* ข้อมูลแพ็กเกจทั้งหมด
+               - monthly = ราคา Bill Monthly
+               - annually = ราคา Bill Annually
+               - url = ลิงก์ที่จะเปิดแท็บใหม่เมื่อกดปุ่ม
+               เปลี่ยน URL ตรงนี้เป็นหน้าจริงของโปรเจกต์ได้ */
+            const plans = {
+                base: {
+                    title: "Base",
+                    description: "Free start for your project on our platform.",
+                    monthly: 0,
+                    annually: 0,
+                    buttonText: "Try for Free",
+                    primary: false,
+                    url: "https://quickspace.com/base-plan"
+                },
+                standard: {
+                    title: "Standard",
+                    description: "For a small company that wants to show what it's worth.",
+                    monthly: 30,
+                    annually: 300,
+                    buttonText: "Start 14 Days Free Trial",
+                    primary: true,
+                    url: "https://quickspace.com/standard-plan"
+                },
+                unlimited: {
+                    title: "Unlimited",
+                    description: "For a large company that wants to achieve maximum returns.",
+                    monthly: 60,
+                    annually: 600,
+                    buttonText: "Start 14 Days Free Trial",
+                    primary: false,
+                    url: "https://quickspace.com/unlimited-plan"
+                }
+            };
+    
+            /* ======================================================
+               เลือกค่าเริ่มต้นของ Mobile Card
+               ตามภาพตัวอย่างคือ Standard
+               ====================================================== */
+            let selectedMobilePlan = "standard";
+    
+            /* ======================================================
+               ดึง Element ที่ต้องใช้
+               ====================================================== */
+            const toggle = document.getElementById("billingToggle");
+            const monthlyBtn = document.getElementById("monthlyBtn");
+            const annuallyBtn = document.getElementById("annuallyBtn");
+    
+            const desktopPrices = document.querySelectorAll(".price");
+            const desktopPeriods = document.querySelectorAll(".period");
+    
+            const mobilePlanTitle = document.getElementById("mobilePlanTitle");
+            const mobileDescription = document.getElementById("mobileDescription");
+            const mobilePrice = document.getElementById("mobilePrice");
+            const mobilePeriod = document.getElementById("mobilePeriod");
+            const mobilePlanButton = document.getElementById("mobilePlanButton");
+    
+            const mobileDropdownButton = document.getElementById("mobileDropdownButton");
+            const mobileDropdownMenu = document.getElementById("mobileDropdownMenu");
+    
+            /* ฟังก์ชันเปิดแท็บใหม่ใช้ได้ทั้ง Desktop และ Mobile */
+            function openPlanUrl(planKey) {
+                const url = plans[planKey].url;
+    
+                // เปิดแท็บใหม่
+                window.open(url, "_blank", "noopener,noreferrer");
+            }
+    
+            /* ฟังก์ชันเปลี่ยนราคา Desktop
+               ใช้ data-monthly และ data-annually จาก HTML */
+            function updateDesktopPrices() {
+                const isAnnually = toggle.checked;
+    
+                desktopPrices.forEach((price) => {
+                    const newPrice = isAnnually
+                        ? price.dataset.annually
+                        : price.dataset.monthly;
+    
+                    price.textContent = `$${newPrice}`;
+                });
+    
+                desktopPeriods.forEach((period) => {
+                    period.textContent = isAnnually
+                        ? "Per User / Per Year"
+                        : "Per User / Per Month";
+                });
+            }
+    
+            /* ฟังก์ชันสร้างตัวเลือกใน Dropdown Mobile
+               ถ้าเลือก Standard อยู่ จะโชว์ Base และ Unlimited
+               ถ้าเลือก Base อยู่ จะโชว์ Standard และ Unlimited */
+            function renderMobileDropdownOptions() {
+                mobileDropdownMenu.innerHTML = "";
+    
+                Object.keys(plans).forEach((planKey) => {
+                    // ไม่ต้องโชว์แพ็กเกจที่กำลังเลือกอยู่ใน Dropdown
+                    if (planKey === selectedMobilePlan) return;
+    
+                    const optionButton = document.createElement("button");
+                    optionButton.type = "button";
+                    optionButton.textContent = plans[planKey].title;
+                    optionButton.className = "block w-full rounded-[10px] px-4 py-3 text-left text-[15px] font-semibold text-[#343767] hover:bg-[#F4F6FB] transition-colors";
+    
+                    optionButton.addEventListener("click", () => {
+                        selectedMobilePlan = planKey;
+                        closeMobileDropdown();
+                        renderMobileCard();
+                    });
+    
+                    mobileDropdownMenu.appendChild(optionButton);
+                });
+            }
+    
+            /* ฟังก์ชันเปลี่ยนข้อมูล Mobile Card
+               ทำให้หลังเลือก Dropdown แล้วยังเปลี่ยน Bill Monthly / Annually ได้ถูกต้อง */
+            function renderMobileCard() {
+                const isAnnually = toggle.checked;
+                const currentPlan = plans[selectedMobilePlan];
+    
+                mobilePlanTitle.textContent = currentPlan.title;
+                mobileDescription.textContent = currentPlan.description;
+    
+                mobilePrice.textContent = `$${isAnnually ? currentPlan.annually : currentPlan.monthly}`;
+                mobilePeriod.textContent = isAnnually
+                    ? "Per User / Per Year"
+                    : "Per User / Per Month";
+    
+                mobilePlanButton.textContent = currentPlan.buttonText;
+    
+                mobilePlanButton.className = currentPlan.primary
+                    ? "mt-9 w-full h-[58px] rounded-[12px] bg-[#E6F0FF] active:bg-[#1D2A91] active:text-white text-[#293FCC] font-bold text-[17px]"
+                    : "mt-9 w-full h-[58px] rounded-[12px] bg-[#E6F0FF] active:bg-[#1D2A91] active:text-white text-[#293FCC] font-bold text-[17px]";
+    
+                renderMobileDropdownOptions();
+            }
+    
+            /* ฟังก์ชันอัปเดตทุกอย่างเมื่อ Billing เปลี่ยน */
+            function updateBilling() {
+                const isAnnually = toggle.checked;
+    
+                updateDesktopPrices();
+                renderMobileCard();
+    
+                // เปลี่ยนสีตัวหนังสือ Bill Monthly / Bill Annually
+                monthlyBtn.classList.toggle("text-[#10184E]", !isAnnually);
+                monthlyBtn.classList.toggle("font-bold", !isAnnually);
+    
+                annuallyBtn.classList.toggle("text-[#10184E]", isAnnually);
+                annuallyBtn.classList.toggle("font-bold", isAnnually);
+            }
+    
+            /* เปิด / ปิด Dropdown Mobile */
+            function toggleMobileDropdown() {
+                const isOpen = !mobileDropdownMenu.classList.contains("hidden");
+    
+                if (isOpen) {
+                    closeMobileDropdown();
+                } else {
+                    openMobileDropdown();
+                }
+            }
+    
+            function openMobileDropdown() {
+                mobileDropdownMenu.classList.remove("hidden");
+                mobileDropdownButton.setAttribute("aria-expanded", "true");
+            }
+    
+            function closeMobileDropdown() {
+                mobileDropdownMenu.classList.add("hidden");
+                mobileDropdownButton.setAttribute("aria-expanded", "false");
+            }
+    
+            /* Events: Toggle และปุ่ม Billing */
+            toggle.addEventListener("change", updateBilling);
+    
+            monthlyBtn.addEventListener("click", () => {
+                toggle.checked = false;
+                updateBilling();
+            });
+    
+            annuallyBtn.addEventListener("click", () => {
+                toggle.checked = true;
+                updateBilling();
+            });
+    
+            /* Events: Dropdown Mobile */
+            mobileDropdownButton.addEventListener("click", (event) => {
+                event.stopPropagation();
+                toggleMobileDropdown();
+            });
+    
+            // กดนอก Dropdown แล้วปิด
+            document.addEventListener("click", (event) => {
+                const clickedInsideDropdown =
+                    mobileDropdownButton.contains(event.target) ||
+                    mobileDropdownMenu.contains(event.target);
+    
+                if (!clickedInsideDropdown) {
+                    closeMobileDropdown();
+                }
+            });
+    
+            // กดปุ่ม Escape แล้วปิด Dropdown
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    closeMobileDropdown();
+                }
+            });
+    
+            /* Events: ปุ่มเปิดแท็บใหม่ Desktop*/
+            document.querySelectorAll("[data-open-plan]").forEach((button) => {
+                button.addEventListener("click", () => {
+                    openPlanUrl(button.dataset.openPlan);
+                });
+            });
+    
+            /* Events: ปุ่มเปิดแท็บใหม่ Mobile */
+            mobilePlanButton.addEventListener("click", () => {
+                openPlanUrl(selectedMobilePlan);
+            });
+    
+            /* เรียกครั้งแรกตอนโหลดหน้าเพื่อให้ราคาและ Mobile Card แสดงถูกต้องตั้งแต่เริ่ม*/
+            updateBilling();
+        </script>
+    </body>
 </html>
