@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+    <title>Quick Space</title>
+</head>
+<body class="min-h-screen bg-[#F3F5FF]">
+    <!-- Section Dashboard: Hill -->
+    <section class="relative w-full min-h-screen overflow-hidden flex flex-col items-center pt-16 md:pt-10 lg:pt-8 pb-10 md:pb-0">
+        <div class="flex flex-col items-center w-full px-6">
+            <h3 class="mb-7 md:mb-6 px-8 md:px-12 py-3 md:py-4 bg-[#E3E7FF] rounded-2xl md:rounded-[18px] text-[#6F7DE0] font-bold text-[20px] md:text-[26px] ">
+                Discover & Explore
+            </h3>
+            <h1 class="text-center font-bold text-[clamp(2.6rem,10vw,4.5rem)] md:text-[54px] text-[#0A1050] max-w-[1020px] md:max-w-[940px] mb-6 md:mb-5 leading-[1.22] md:leading-[1.24] tracking-[-0.02em]">
+                Join An Attractive &amp; Personalized
+            </h1>
+            <p class="max-w-[560px] md:max-w-[850px] mx-auto text-center font-medium text-[clamp(1.1rem,5vw,2.1rem)] md:text-[18px] text-[#616581] mb-16 md:mb-10 leading-[1.65] md:leading-[1.7]">
+                Graphs displaying your performance for metrics like follower evolution, average rate
+                per post and reach and impressions to give you the insights.
+            </p>
+        </div>
+        <div class="relative w-full flex justify-center mt-0 md:mt-1">
+            <div class="relative w-full md:hidden flex justify-center items-center max-w-[96vw]">
+                <img 
+                    class="relative z-20 w-[min(92vw,1000px)] rounded-[24px]"
+                    src="/assets/images/dashboard 3.png"
+                    alt="Mobile dashboard overview"
+                >
+            </div>
+            <div class="relative w-full hidden md:flex justify-center items-center max-w-[96vw] md:max-w-[1180px]">
+                <!-- Dashboard Main Image -->
+                <img 
+                    class="relative z-20 w-[min(92vw,530px)] md:w-[1050px] rounded-[24px]"
+                    src="/assets/images/dashboard.png"
+                    alt="Dashboard overview showing sales summary, expenses, visitors, chart, and recent orders"
+                >
+                <!-- Overlay Small Graph Image -->
+                <img 
+                    class="absolute z-30 left-[8px] md:left-[-82px] bottom-[66px] md:bottom-[30px] w-[170px] md:w-[270px] drop-shadow-[0_20px_35px_rgba(12,26,75,0.12)] rounded-[16px]"
+                    src="/assets/images/sales.png"
+                    alt="Sales bar chart"
+                >
+            </div>
+        </div>
+    </section>
+</body>
+</html>
