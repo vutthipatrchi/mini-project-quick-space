@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Project Quickspace</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+            kodchasan: ['Kodchasan', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-jakarta m-0 p-0 box-border bg-gradient-to-b from-[#E4ECFF] from-0.5% to-white min-h-screen"></body>
+<!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-[#E4ECFF]/90 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4 md:px-10 md:py-5">
+      
+      <a class="flex items-center" href="#">
+        <img class="h-8 w-auto object-contain md:h-10" src="img/Logo.png" alt="QuickSpace logo" />
+      </a>
+      
+      <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+        <li><a class="text-sm font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Company</a></li>
+        <li><a class="text-sm font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Feature</a></li>
+        <li><a class="text-sm font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Pricing</a></li>
+        <li><a class="text-sm font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Log In</a></li>
+        <li>
+          <a class="inline-flex items-center px-10 py-3 text-sm font-semibold text-white bg-[#293FCC] rounded-xl transition-colors duration-150 hover:bg-[#152894]" href="#">Try Free</a>
+        </li>
+      </ul>
+      
+      <button class="block md:hidden text-[#0D1B5E] focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </nav>
+  </header>
+
+<!-- main -->
+  <main>
+    
+    <section class="max-w-7xl mx-auto flex flex-col-reverse items-center gap-10 px-5 pt-4 pb-12 md:flex-row md:gap-16 md:px-10 md:pt-12 md:pb-16">
+
+      <div class="flex flex-col items-center text-center gap-5 w-full md:items-start md:text-left md:gap-7 md:w-[44%]">
+        
+        <span class="self-center inline-flex items-center px-3 py-1 text-xs font-bold text-[#6A79DD] bg-white border border-none rounded-xl md:self-start md:px-4 md:py-1.5 md:text-sm">
+          Welcome QuickSpace
+        </span>
+        
+        <h1 class="m-0 text-3xl font-bold text-[#0D1B5E] leading-[1.3] md:text-5xl md:leading-[1.5]">
+          Satisfied Customer<br />
+          Is the Best Business<br />
+          Strategy
+        </h1>
+        
+        <p class="m-0 text-sm text-slate-400 leading-[2] max-w-sm mx-auto md:mx-0 md:max-w-md md:text-base md:leading-[2.2]">
+          Backed with vast experience and fully up to date skills<br class="hidden md:inline"> 
+          set, at Enuke Software offer the best in class<br class="hidden md:inline"> 
+          E-Prescription solution
+        </p>
+        
+        <div class="flex flex-col items-center gap-4 w-full sm:w-auto md:flex-row md:gap-6">
+          <a class="inline-flex items-center justify-center w-full px-10 py-3 text-sm font-bold text-white bg-[#293FCC] rounded-xl transition-colors duration-150 hover:bg-[#152894] md:w-auto md:px-12 md:py-4" href="#">Try Free</a>          
+          <a class="flex items-center gap-1.5 text-sm font-semibold text-[#0D1B5E]" href="#">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full border border-[#293FCC]">
+              <svg class="w-4 h-4 ml-0.5" fill="#293FCC" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.841z" />
+              </svg>
+            </span>
+            View Demo
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="relative h-[380px] w-full md:flex-1 md:h-[580px]">
+
+        <div class="absolute top-24 left-16 right-24 bottom-10 bg-[#B9CCFE] rounded-[2rem] md:top-28 md:left-24 md:right-28 md:bottom-20 md:rounded-[2.5rem]"></div>
+
+        <img class="absolute bottom-10 left-1/3 -translate-x-1/2 ml-9 h-[330px] w-auto object-contain z-10 md:bottom-20 md:left-60 md:-translate-x-[45%] md:h-[530px] md:ml-0" src="img/human.png" alt="3D character with arms crossed" />
+
+<!-- Great Designer Card -->
+        <div class="absolute left-2 top-20 z-20 md:left-8 md:top-24">
+          <div class="relative">
+            <div class="absolute -left-[3px] -top-[3px] -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px] rounded-full overflow-hidden z-20 md:-left-[5px] md:-top-[5px] md:w-[46px] md:h-[46px]">
+              <img class="w-full h-full object-cover" src="img/great-designer.png" alt="Great Designer avatar" />
+            </div>  
+            <div class="bg-white rounded-md px-2.5 py-2.5 flex flex-col gap-[1px] min-w-[75px] md:px-3.5 md:py-3.5 md:gap-0.5 md:min-w-[95px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+              <span class="text-xs font-bold text-[#535784] leading-tight md:text-[13px]">Great Designer</span>
+              <div class="flex items-center gap-0.5">
+                <span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+                <span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+                <span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+                <span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+                <span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Gavin Card -->
+<div class="flex absolute -right-4 bottom-20 z-20 items-center gap-2 bg-white rounded-2xl px-3 py-3 w-[170px] md:absolute md:-right-6 md:bottom-36 md:gap-4 md:bg-white md:rounded-2xl md:px-5 md:py-4 md:w-[265px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+  <div class="relative flex-shrink-0">
+    <div class="w-8 h-8 rounded-full overflow-hidden ring-2 ring-[#0049C6] ring-offset-[2px] md:w-12 md:h-12 md:ring-offset-[3px]">
+      <img class="w-full h-full object-cover" src="img/Gavin-henry.png" alt="Gavin Henry avatar" />
+    </div>
+    <span class="absolute -top-[3px] -right-[3px] block w-2.5 h-2.5 rounded-full bg-green-400 border border-white md:-top-[6px] md:-right-[6px] md:w-4 md:h-4 md:border-2"></span>
+  </div>
+  <div class="flex flex-col flex-1 gap-0 md:gap-0.5">
+    <span class="text-xs font-bold text-[#535783] md:text-base">Gavin Henry</span>
+    <span class="text-[11px] text-slate-400 md:text-sm">1m ago</span>
+  </div>
+  <span class="relative -left-2 md:left-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#C8A6FF] text-white text-xs font-bold md:w-9 md:h-9 md:text-sm">1</span>
+</div>
+
+<!-- Notification Card -->
+<div class="absolute left-0 bottom-0 z-20 flex items-center gap-2 bg-white rounded-3xl pl-2 pr-3 py-2 w-fit md:-left-2 md:bottom-8 md:gap-3 md:rounded-2xl md:px-4 md:py-4 md:w-[240px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+  <div class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-red-100 md:w-11 md:h-11">
+    <img class="w-6 h-6 object-contain md:w-6 md:h-6" src="img/Notification.png" alt="Notification icon" />
+  </div>
+  <div class="flex flex-col gap-0.5">
+    <span class="text-[10px] font-medium text-slate-400 md:text-xs">Notification</span>
+    <span class="text-[11px] font-bold text-[#0D1B5E] leading-tight md:text-sm">Send a message to<br class="md:hidden" /> Ilya Zinchenko</span>
+  </div>
+</div>
+    </section>
+
+<!-- Brand -->
+    <section class="max-w-5xl mx-auto w-full flex flex-wrap items-center justify-around gap-6 px-5 mt-4 pb-3 md:gap-10 md:mt-8 md:px-10 md:pb-4">
+      <img class="h-7 w-auto object-contain opacity-100 grayscale md:h-9" src="img/brand-01.png" alt="Caley Peace" />
+      <img class="h-7 w-auto object-contain opacity-100 grayscale md:h-9" src="img/brand-02.png" alt="Design Studio" />
+      <img class="h-7 w-auto object-contain opacity-100 grayscale md:h-9" src="img/brand-03.png" alt="Harrison Industry Co" />
+      <img class="h-7 w-auto object-contain opacity-100 grayscale md:h-9" src="img/brand-04.png" alt="Barbecue" />
+    </section>
+
+  </main>
+</body>
+</html>
