@@ -1,5 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mini Project Quickspace</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+						},
+					},
+				},
+			};
+		</script>
+
+		<style>
+			@keyframes btn-bounce {
+				0%   { transform: scale(1); }
+				40%  { transform: scale(0.93); }
+				70%  { transform: scale(1.04); }
+				100% { transform: scale(1); }
+			}
+
+			.btn-bounce {
+				animation: btn-bounce 350ms ease-out;
+			}
+
+			@keyframes menu-slide-down {
+				from {
+					opacity: 0;
+					transform: translateY(-8px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes menu-slide-up {
+				from {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				to {
+					opacity: 0;
+					transform: translateY(-8px);
+				}
+			}
+
+			#mobile-menu.flex {
+				animation: menu-slide-down 250ms ease-out forwards;
+			}
+
+			#mobile-menu.closing {
+				animation: menu-slide-up 200ms ease-in forwards;
+			}
+		</style>
+	</head>
+
+	<body class="font-jakarta m-0 p-0 box-border bg-gradient-to-b from-[#E4ECFF] from-0.5% to-white min-h-screen">
 <head>
 
     <meta charset="UTF-8">
@@ -7,8 +74,142 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Quick Space</title>
 </head>
+<body class="font-jakarta m-0 p-0 box-border bg-gradient-to-b from-[#E4ECFF] from-0.5% to-white min-h-screen">
+
+		<!-- Navbar -->
+		<header class="sticky top-0 z-40 bg-[#E4ECFF]/90 backdrop-blur-md">
+			<nav class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4 md:px-10 md:py-5">
+				<a class="flex items-center" href="#">
+					<img class="h-5 w-auto object-contain md:h-10" src="img/Logo.svg" alt="QuickSpace logo" />
+				</a>
+
+				<ul class="hidden md:flex items-center gap-12 list-none m-0 p-0">
+					<li><a class="text-md font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Company</a></li>
+					<li><a class="text-md font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Feature</a></li>
+					<li><a class="text-md font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Pricing</a></li>
+					<li><a class="text-md font-medium text-[#090F4E] transition-colors duration-150 hover:opacity-80" href="#">Log In</a></li>
+					<li>
+						<a class="btn-try-free inline-flex items-center justify-center px-16 py-4 text-lg font-jakarta text-white bg-[#293FCC] rounded-md transition-colors duration-150 cursor-pointer hover:bg-[#152894] md:px-12 md:py-3" href="#">Try Free</a>
+					</li>
+				</ul>
+
+				<button id="menu-toggle" class="block md:hidden text-[#0D1B5E] focus:outline-none" aria-label="Toggle Menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</nav>
+
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 z-50 flex-col gap-1 px-5 pb-4 bg-[#E4ECFF]/95 backdrop-blur-md shadow-md">
+				<a class="py-3 text-sm font-medium text-[#090F4E] border-b border-slate-200/50 hover:opacity-70" href="#">Company</a>
+				<a class="py-3 text-sm font-medium text-[#090F4E] border-b border-slate-200/50 hover:opacity-70" href="#">Feature</a>
+				<a class="py-3 text-sm font-medium text-[#090F4E] border-b border-slate-200/50 hover:opacity-70" href="#">Pricing</a>
+				<a class="py-3 text-sm font-medium text-[#090F4E] border-b border-slate-200/50 hover:opacity-70" href="#">Log In</a>
+				<a class="btn-try-free mt-3 inline-flex items-center justify-center w-full py-3 text-sm font-semibold text-white bg-[#293FCC] rounded-md transition-colors duration-150 cursor-pointer hover:bg-[#152894]" href="#">Try Free</a>
+			</div>
+		</header>
+
+		<main>
+
+			<!-- Section 1 : Hero Section -->
+			<section class="max-w-7xl mx-auto flex flex-col-reverse items-center gap-10 px-5 pt-4 pb-12 md:flex-row md:gap-16 md:px-10 md:pt-12 md:pb-16">
+
+			<div class="flex flex-col items-center text-center gap-5 w-full md:items-start md:text-left md:gap-7 md:w-[44%]">
+				<span class="self-center inline-flex items-center px-3 py-1 text-base font-bold text-[#6A79DD] bg-white rounded-xl md:self-start md:px-4 md:py-1.5 md:text-sm">
+					Welcome QuickSpace
+				</span>
+				<h1 class="m-0 text-4xl font-bold text-[#101654] leading-[1.3] md:text-5xl md:leading-[1.5]">
+					Satisfied Customer<br />
+					Is the Best Business<br />
+					Strategy
+				</h1>
+				<p class="m-0 text-lg text-slate-400 leading-[2] text-justify max-w-[360px] mx-auto md:mx-0 md:max-w-md md:text-base md:leading-[2.2]">
+					Backed with vast experience and fully up to date skills<br class="hidden md:inline" />
+					set, at Enuke Software offer the best in class<br class="hidden md:inline" />
+					E-Prescription solution
+				</p>
+				<div class="flex flex-col items-center gap-4 w-full sm:w-auto md:flex-row md:gap-6">
+					<a class="btn-try-free inline-flex items-center justify-center px-16 py-4 text-lg font-jakarta text-white bg-[#293FCC] rounded-md transition-colors duration-150 cursor-pointer hover:bg-[#152894] md:px-12" href="#">Try Free</a>
+					<a class="flex items-center gap-2 text-base font-medium text-[#0D1B5E]" href="#">
+						<span class="flex items-center justify-center w-7 h-7 rounded-full border border-[#293FCC]">
+							<svg class="w-4 h-4 ml-0.5" fill="#293FCC" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.841z" />
+							</svg>
+						</span>
+						View Demo
+					</a>
+				</div>
+			</div>
  
 <body class="m-0 p-0 box-border bg-gradient-to-b from-white from-0.5% to-[#E4ECFF] min-h-screen overflow-x-hidden">
+
+
+				<!-- Hero Visual -->
+				<div class="relative h-[380px] w-full md:flex-1 md:h-[580px]">
+
+					<!-- Background Rectangle -->
+					<div class="absolute top-24 left-16 right-24 bottom-10 bg-[#B9CCFE] rounded-[2rem] md:top-28 md:left-24 md:right-36 md:bottom-20 md:rounded-[2.5rem]"></div>
+
+					<!-- 3D Character -->
+					<img class="absolute bottom-10 left-1/3 -translate-x-1/2 ml-9 h-[330px] w-auto object-contain z-10 md:bottom-20 md:left-60 md:-translate-x-[45%] md:h-[530px] md:ml-0" src="img/human.png" alt="3D character with arms crossed" />
+
+					<!-- Great Designer Card -->
+					<div class="absolute left-2 top-20 z-20 md:left-8 md:top-24">
+						<div class="relative">
+							<div class="absolute -left-[3px] -top-[3px] -translate-x-1/2 -translate-y-1/2 w-[36px] h-[36px] rounded-full overflow-hidden z-20 md:-left-[5px] md:-top-[5px] md:w-[46px] md:h-[46px]">
+								<img class="w-full h-full object-cover" src="img/great-designer.png" alt="Great Designer avatar" />
+							</div>
+							<div class="bg-white rounded-md px-2.5 py-2.5 flex flex-col gap-[1px] min-w-[75px] md:px-3.5 md:py-3.5 md:gap-0.5 md:min-w-[95px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+								<span class="text-xs font-bold text-[#535784] leading-tight md:text-[13px]">Great Designer</span>
+								<div class="flex items-center gap-0.5">
+									<span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+									<span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+									<span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+									<span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+									<span class="text-yellow-400 text-sm leading-none md:text-base">★</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Gavin Card -->
+					<div class="flex absolute -right-3 bottom-20 z-20 items-center gap-2 bg-white rounded-2xl px-2 py-2 w-[165px] md:-right-6 md:bottom-36 md:gap-4 md:px-5 md:py-4 md:w-[265px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+						<div class="relative flex-shrink-0">
+							<div class="w-7 h-7 rounded-full overflow-hidden ring-1 ring-[#0049C6] ring-offset-[2px] md:w-12 md:h-12 md:ring-2 md:ring-offset-[3px]">
+								<img class="w-full h-full object-cover" src="img/Gavin-henry.png" alt="Gavin Henry avatar" />
+							</div>
+							<span class="absolute -top-[3px] -right-[3px] block w-2 h-2 rounded-full bg-green-400 border border-white md:-top-[6px] md:-right-[6px] md:w-4 md:h-4 md:border-2"></span>
+						</div>
+						<div class="flex flex-col flex-1 md:gap-0.5">
+							<span class="text-xs font-bold text-[#535783] md:text-base">Gavin Henry</span>
+							<span class="text-[11px] text-slate-400 md:text-sm">1m ago</span>
+						</div>
+						<span class="relative -left-2 md:left-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#C8A6FF] text-white text-xs font-bold md:w-9 md:h-9 md:text-sm">1</span>
+					</div>
+
+					<!-- Notification Card -->
+					<div class="absolute left-0 bottom-0 z-20 flex items-center gap-2 bg-white rounded-3xl pl-2 pr-3 py-2 w-fit md:-left-2 md:bottom-8 md:gap-3 md:rounded-2xl md:px-4 md:py-4 md:w-[240px] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+						<div class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-red-100 md:w-11 md:h-11">
+							<img class="w-6 h-6 object-contain" src="img/Notification.png" alt="Notification icon" />
+						</div>
+						<div class="flex flex-col gap-0.5">
+							<span class="text-[10px] font-medium text-slate-400 md:text-xs">Notification</span>
+							<span class="text-[11px] font-bold text-[#0D1B5E] leading-tight md:text-sm">Send a message to<br class="md:hidden" /> Ilya Zinchenko</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Brand -->
+			<section class="max-w-5xl mx-auto w-full flex flex-wrap items-center justify-around gap-6 px-5 mt-6 pb-6 md:gap-10 md:px-10 md:mt-24 md:pb-8">
+				<img class="h-8 w-auto object-contain md:h-12" src="img/brand-01.svg" alt="Caley Peace" />
+				<img class="h-8 w-auto object-contain md:h-12" src="img/brand-02.svg" alt="Design Studio" />
+				<img class="h-8 w-auto object-contain md:h-12" src="img/brand-03.svg" alt="Harrison Industry Co" />
+				<img class="hidden md:block h-8 w-auto object-contain md:h-12" src="img/brand-04.svg" alt="Barbecue" />
+			</section>
+
+	</main>
   <!-- Section 1: โชกุน -->
 
   <section class="max-w-6xl mx-auto px-6 py-24">
@@ -108,7 +309,6 @@ src="./images/icon-middle.svg"
         </a>
 
       </div>
-
     </div>
     <!-- Section Dashboard: Hill -->
   </section>
@@ -558,6 +758,47 @@ src="./images/icon-middle.svg"
           </div>
       </div>
   </section>
+
+		<script>
+			// ---- Mobile Menu ----
+
+			const menuToggle = document.getElementById('menu-toggle');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			menuToggle.addEventListener('click', () => {
+				if (mobileMenu.classList.contains('flex')) {
+					mobileMenu.classList.add('closing');
+					mobileMenu.addEventListener('animationend', () => {
+						mobileMenu.classList.remove('flex', 'closing');
+						mobileMenu.classList.add('hidden');
+					}, { once: true });
+				} else {
+					mobileMenu.classList.remove('hidden');
+					mobileMenu.classList.add('flex');
+				}
+			});
+
+			// ---- Bounce Effect ----
+
+			const createBounce = (e) => {
+				const btn = e.currentTarget;
+
+				btn.classList.remove('btn-bounce');
+				void btn.offsetWidth;
+				btn.classList.add('btn-bounce');
+
+				btn.addEventListener('animationend', () => btn.classList.remove('btn-bounce'), { once: true });
+			};
+
+			const initBounce = () => {
+				const tryFreeButtons = document.querySelectorAll('.btn-try-free');
+				tryFreeButtons.forEach((btn) => btn.addEventListener('click', createBounce));
+			};
+
+			// ---- Init ----
+
+			initBounce();
+		</script>
 
   <script>
     /* ข้อมูลแพ็กเกจทั้งหมด
